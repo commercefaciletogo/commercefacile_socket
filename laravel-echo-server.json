@@ -1,4 +1,5 @@
 {
+	"authHost": "http://localhost",
 	"authEndpoint": "/broadcasting/auth",
 	"clients": [
 		{
@@ -15,10 +16,10 @@
 		"sqlite": {}
 	},
 	"devMode": false,
-	"host": null,
+	"host": "commercefacile.com",
 	"port": "6001",
-	"protocol": "http",
+	"protocol": "https",
 	"socketio": {},
-	"sslCertPath": "",
-	"sslKeyPath": ""
+	"sslCertPath": "./.cert/certificate.pem",
+	"sslKeyPath": "./.cert/private.key"
 }
