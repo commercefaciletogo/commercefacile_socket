@@ -20,6 +20,6 @@
 	"port": "6001",
 	"protocol": "https",
 	"socketio": {},
-	"sslCertPath": "./.nginx/.cert/certificate.pem",
-	"sslKeyPath": "./.nginx/.cert/private.key"
+	"sslCertPath": "/var/www/socket/certificate.pem",
+	"sslKeyPath": "/var/www/socket/private.key"
 }
