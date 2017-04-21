@@ -2,14 +2,16 @@ FROM                    node:latest
 
 MAINTAINER              thomasdolar@gmail.com
 
-ENV                     APP_ENV=production
+ENV                     APP_ENV=development
 
-RUN                     npm install -g laravel-echo-server
+COPY                    . /var/www/socket
 
-COPY                    laravel-echo-server.json /var/www/socket/laravel-echo-server.json
-# COPY                    ./.cert/certificate.pem /var/www/socket/certificate.pem
-# COPY                    ./.cert/private.key /var/www/socket/private.key
+RUN                     npm install supervisor -g
+
+RUN                     npm install
 
 WORKDIR                 /var/www/socket
 
-ENTRYPOINT              ["laravel-echo-server", "start"]
+EXPOSE                  6001
+
+ENTRYPOINT              ["supervisor", "socket.js"]
