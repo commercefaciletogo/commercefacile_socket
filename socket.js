@@ -1,7 +1,5 @@
 const app = require('http').createServer(handler);
 
-const _ = require('lodash');
-
 const io = require('socket.io')(app);
 
 const Redis = require('ioredis');
