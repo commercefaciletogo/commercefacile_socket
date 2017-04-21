@@ -8,9 +8,9 @@ COPY                    . /var/www/socket
 
 RUN                     npm install supervisor -g
 
-RUN                     npm install
-
 WORKDIR                 /var/www/socket
+
+RUN                     npm install
 
 EXPOSE                  6001
 
