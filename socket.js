@@ -6,7 +6,7 @@ const Redis = require('ioredis');
 
 const redis = new Redis(6379, 'redis');
 
-const port = 6001;
+const port = 8443;
 
 function handler(req, res){
     res.writeHead(200);

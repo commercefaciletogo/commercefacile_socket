@@ -2,7 +2,7 @@ FROM                    node:latest
 
 MAINTAINER              thomasdolar@gmail.com
 
-ENV                     APP_ENV=development
+ENV                     NODE_ENV=production
 
 COPY                    . /var/www/socket
 
@@ -12,6 +12,6 @@ WORKDIR                 /var/www/socket
 
 RUN                     npm install
 
-EXPOSE                  6001
+EXPOSE                  8443
 
 ENTRYPOINT              ["supervisor", "socket.js"]
